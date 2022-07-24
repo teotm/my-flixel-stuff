@@ -29,13 +29,13 @@
 
 	<!-- _____________________________ Path Settings ____________________________ -->
 
-	<set name="BUILD_DIR" value="zzz_exportFolder" />
-	<source path="HelloWorld/source" /> <!-- You can change the HelloWorld to any game foler you want -->
+	<set name="BUILD_DIR" value="zzz_exportFolder" /> <!-- Setting only one export folder, so I won't wait 100 years to build another game -->
+	<source path="HelloWorld/source" /> <!-- You can change the HelloWorld to any game folder you want -->
 	<assets path="HelloWorld/assets" rename="assets" />
 
 	<!-- ______________________ Compile the games you want! _____________________ -->
 	<!-- _______________ Just remove the comments from the lines ________________ -->
-	<define name="HELLO_WORLD_FLIXEL"/>
+	<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
