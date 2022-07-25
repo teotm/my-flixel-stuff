@@ -1,0 +1,60 @@
+{
+	"names": [
+		{
+			"name": "Quizomator 6000",
+			"aliases": [
+				"Quizomator"
+			],
+			"quote": "That name is MINE! Choose your OWN name.",
+			"locked": true,
+			"timeToDisplay": 4
+		},
+		{
+			"name": "Flowey",
+			"aliases": [
+				"フラウ"
+			],
+			"quote": "I already CHOSE\nthat name.",
+			"locked": true,
+			"timeToDisplay": 4
+		},
+		{
+			"name": "Toriel",
+			"aliases": [
+				"トリエル"
+			],
+			"quote": "I think you should\nthink of your own\nname, my child.",
+			"locked": true,
+			"timeToDisplay": 4
+		},
+		{
+			"name": "Sans",
+			"aliases": [
+				"サンズ",
+				"Sansy"
+			],
+			"quote": "nope.",
+			"locked": true,
+			"timeToDisplay": 4
+		},
+		{
+			"name": "Temmie",
+			"aliases": [
+				"テミー",
+				"Tem"
+			],
+			"quote": "hOI!",
+			"locked": false,
+			"timeToDisplay": 4
+		},
+		{
+			"name": "Gaster",
+			"aliases": [
+				"ガスター"
+			],
+			"quote": "",
+			"locked": true,
+			"timeToDisplay": 0
+		}
+	]
+}

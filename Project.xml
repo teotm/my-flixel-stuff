@@ -2,9 +2,21 @@
 <project xmlns="http://lime.software/project/1.0.2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://lime.software/project/1.0.2 http://lime.software/xsd/project-1.0.2.xsd">
 
+	<!-- ______________________ Compile the games you want! _____________________ -->
+	<!-- _____________ Just remember to compile only one at a time ______________ -->
+	<!-- _____________________ and turn others as comments ______________________ -->
+	<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
+	<define name="QUIZOMATOR"/>
+
 	<!-- _________________________ Application Settings _________________________ -->
 
-	<app title="HelloWorld" file="HelloWorld" main="Main" version="0.0.1" company="teotm4" />
+	<section if="HELLO_WORLD_FLIXEL">
+		<app title="HelloWorld" file="HelloWorld" main="Main" version="0.0.1" company="teotm4" />
+	</section>
+
+	<section if="QUIZOMATOR">
+		<app title="Undertale Quiz (Flixel Release!)" file="Quizomator" main="Main" version="0.0.1" company="teotm4" />
+	</section>
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
 		or you can set the actual size of your file manually at "FlxPreloaderBase-onUpdate-bytesTotal"-->
@@ -16,7 +28,13 @@
 	<!-- ____________________________ Window Settings ___________________________ -->
 
 	<!--These window settings apply to all targets-->
-	<window width="640" height="480" fps="60" background="#000000" hardware="true" vsync="false" />
+	<section if="HELLO_WORLD_FLIXEL">
+		<window width="640" height="480" fps="60" background="#000000" hardware="true" vsync="false" />
+	</section>
+
+	<section if="QUIZOMATOR">
+		<window width="640" height="480" fps="60" background="#99D9EA" hardware="true" vsync="false" />
+	</section>
 
 	<!--HTML5-specific-->
 	<window if="html5" resizable="false" />
@@ -30,18 +48,31 @@
 	<!-- _____________________________ Path Settings ____________________________ -->
 
 	<set name="BUILD_DIR" value="zzz_exportFolder" /> <!-- Setting only one export folder, so I won't wait 100 years to build another game -->
-	<source path="HelloWorld/source" /> <!-- You can change the HelloWorld to any game folder you want -->
-	<assets path="HelloWorld/assets" rename="assets" />
+	<section if="HELLO_WORLD_FLIXEL">
+		<source path="HelloWorld/source" /> <!-- You can change the HelloWorld to any game folder you want -->
+		<assets path="HelloWorld/assets" rename="assets" />
+	</section>
 
-	<!-- ______________________ Compile the games you want! _____________________ -->
-	<!-- _______________ Just remove the comments from the lines ________________ -->
-	<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
+	<section if="QUIZOMATOR">
+		<source path="Quizomator/source" /> <!-- You can change the HelloWorld to any game folder you want -->
+		<assets path="Quizomator/assets" rename="assets" />
+	</section>
 
 	<!-- _______________________________ Libraries ______________________________ -->
 
 	<!-- I'll be adding more such sections, so you can compile the specific games you want. -->
 	<section if="HELLO_WORLD_FLIXEL">
 		<haxelib name="flixel" />
+	</section>
+
+	<section if="QUIZOMATOR">
+		<haxelib name="flixel" />
+		<haxedev set='webgl' />
+		<haxelib name="flixel-ui" />
+		<haxelib name="flixel-addons" />
+		<haxelib name="hscript" />
+		<haxelib name="discord_rpc" if="desktop"/>
+		<haxelib name="tjson" />
 	</section>
 
 	<!--In case you want to use the addons package-->

@@ -1,0 +1,25 @@
+{
+	"questions": [
+		{
+			"number": 0,
+			"question": "What is your name?",
+			"correctAnswer": null,
+			"punishment": false,
+			"prize": false,
+			"answers": null
+		},
+		{
+			"number": 1,
+			"question": "What happens when you answer correctly?",
+			"correctAnswer": "",
+			"punishment": false,
+			"prize": true,
+			"answers": [
+				"A. More Questions",
+				"B. Free party for you",
+				"C. Lego",
+				"D. Fame & Glory"
+			]
+		}
+	]
+}
