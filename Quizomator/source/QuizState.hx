@@ -6,6 +6,7 @@ import flixel.graphics.FlxGraphic;
 import flixel.graphics.atlas.FlxAtlas;
 import flixel.graphics.frames.FlxAtlasFrames;
 import flixel.text.FlxText;
+import lime.app.Application;
 #if desktop
 import Discord.DiscordClient;
 #end
@@ -18,8 +19,12 @@ class QuizState extends FlxState
 	override public function create()
 	{
 		#if desktop
-		// Updating Discord Rich Presence
-		DiscordClient.changePresence("THE GAME IS STILL IN DEVELOPMENT!", null);
+		DiscordClient.initialize();
+
+		Application.current.onExit.add(function(exitCode)
+		{
+			DiscordClient.shutdown();
+		});
 		#end
 
 		greetingText = new FlxText(0, 0, "Welcome to the\nUndertale Quiz!", 24);

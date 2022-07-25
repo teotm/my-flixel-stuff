@@ -73,6 +73,7 @@
 		<haxelib name="hscript" />
 		<haxelib name="discord_rpc" if="desktop"/>
 		<haxelib name="tjson" />
+		<haxelib name="hxcpp-debug-server" if="desktop"/>
 	</section>
 
 	<!--In case you want to use the addons package-->
