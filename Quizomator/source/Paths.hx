@@ -9,8 +9,6 @@ using StringTools;
 
 class Paths
 {
-	inline public static var SOUND_EXT = "wav";
-
 	static var currentLevel:String;
 
 	static public function setCurrentLevel(name:String)
@@ -18,23 +16,9 @@ class Paths
 		currentLevel = name.toLowerCase();
 	}
 
-	static function getPath(file:String, type:AssetType, library:Null<String>)
+	static function getPath(file:String)
 	{
-		if (library != null)
-			return getLibraryPath(file, library);
-
-		if (currentLevel != null)
-		{
-			var levelPath = getLibraryPathForce(file, currentLevel);
-			if (OpenFlAssets.exists(levelPath, type))
-				return levelPath;
-
-			levelPath = getLibraryPathForce(file, "default");
-			if (OpenFlAssets.exists(levelPath, type))
-				return levelPath;
-		}
-
-		return getPreloadPath(file);
+		return 'assets/$file';
 	}
 
 	static public function getLibraryPath(file:String, library = "default")
@@ -52,18 +36,18 @@ class Paths
 		return 'assets/$file';
 	}
 
-	inline static public function image(key:String, ?library:String)
+	inline static public function image(key:String)
 	{
-		return getPath('images/$key.png', IMAGE, library);
+		return getPath('images/$key.png');
 	}
 
-	inline static public function xml(key:String, ?library:String)
+	inline static public function xml(key:String)
 	{
-		return getPath('data/$key.xml', TEXT, library);
+		return getPath('data/$key.xml');
 	}
 
-	inline static public function wavSound(key:String, ?library:String) 
+	inline static public function wavSound(key:String)
 	{
-		return getPath('sounds/$key.$SOUND_EXT', SOUND, library);
+		return getPath('sounds/$key.wav');
 	}
 }
