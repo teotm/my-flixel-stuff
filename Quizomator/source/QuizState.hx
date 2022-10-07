@@ -11,10 +11,26 @@ import lime.app.Application;
 import Discord.DiscordClient;
 #end
 
+typedef LeQuestionList =
+{
+	var questions:Array<TheFunnyQuestion>;
+}
+
+typedef TheFunnyQuestion =
+{
+	var number:Int;
+	var question:String;
+	var correctAnswerList:Null<Array<String>>;
+	var punishment:Bool;
+	var prize:Bool;
+	var answers:Null<Array<String>>;
+}
+
 class QuizState extends FlxState
 {
 	var greetingText:FlxText;
 	var theRobot:FlxSprite;
+	var leFunnyQuestions:LeQuestionList;
 
 	override public function create()
 	{

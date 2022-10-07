@@ -6,7 +6,8 @@
 	<!-- _____________ Just remember to compile only one at a time ______________ -->
 	<!-- _____________________ and turn others as comments ______________________ -->
 	<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
-	<define name="QUIZOMATOR"/>
+	<!-- <define name="QUIZOMATOR"/> -->
+	<define name="CHESS"/> <!-- They ain't 100% mine -->
 
 	<!-- _________________________ Application Settings _________________________ -->
 
@@ -15,7 +16,11 @@
 	</section>
 
 	<section if="QUIZOMATOR">
-		<app title="Undertale Quiz (Flixel Release!)" file="Quizomator" main="Main" version="0.0.1" company="teotm4" />
+		<app title="Undertale Quiz (Haxe Port!)" file="Quizomator" main="Main" version="0.0.1" company="teotm4" />
+	</section>
+
+	<section if="CHESS">
+		<app title="Chess lol" file="Chess" main="Main" version="0.0.1" company="teotm4" />
 	</section>
 
 	<!--The flixel preloader is not accurate in Chrome. You can use it regularly if you embed the swf into a html file
@@ -36,6 +41,10 @@
 		<window width="640" height="480" fps="60" background="#99D9EA" hardware="true" vsync="false" />
 	</section>
 
+	<section if="CHESS">
+		<window width="640" height="480" fps="60" background="#000000" hardware="true" vsync="false" />
+	</section>
+
 	<!--HTML5-specific-->
 	<window if="html5" resizable="false" />
 
@@ -49,13 +58,18 @@
 
 	<set name="BUILD_DIR" value="zzz_exportFolder" /> <!-- Setting only one export folder, so I won't wait 100 years to build another game -->
 	<section if="HELLO_WORLD_FLIXEL">
-		<source path="HelloWorld/source" /> <!-- You can change the HelloWorld to any game folder you want -->
+		<source path="HelloWorld/source" />
 		<assets path="HelloWorld/assets" rename="assets" />
 	</section>
 
 	<section if="QUIZOMATOR">
-		<source path="Quizomator/source" /> <!-- You can change the HelloWorld to any game folder you want -->
+		<source path="Quizomator/source" />
 		<assets path="Quizomator/assets" rename="assets" />
+	</section>
+
+	<section if="CHESS">
+		<source path="Chess/source" />
+		<assets path="Chess/assets" rename="assets" />
 	</section>
 
 	<!-- _______________________________ Libraries ______________________________ -->
@@ -67,13 +81,12 @@
 
 	<section if="QUIZOMATOR">
 		<haxelib name="flixel" />
-		<haxedev set='webgl' />
-		<haxelib name="flixel-ui" />
-		<haxelib name="flixel-addons" />
-		<haxelib name="hscript" />
 		<haxelib name="discord_rpc" if="desktop"/>
-		<haxelib name="tjson" />
-		<haxelib name="hxcpp-debug-server" if="desktop"/>
+	</section>
+
+	<section if="CHESS">
+		<haxelib name="flixel" />
+		<haxelib name="kha" if="desktop"/>
 	</section>
 
 	<!--In case you want to use the addons package-->
