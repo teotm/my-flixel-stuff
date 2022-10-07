@@ -6,8 +6,8 @@
 	<!-- _____________ Just remember to compile only one at a time ______________ -->
 	<!-- _____________________ and turn others as comments ______________________ -->
 	<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
-	<!-- <define name="QUIZOMATOR"/> -->
-	<define name="CHESS"/> <!-- They ain't 100% mine -->
+	<define name="QUIZOMATOR"/>
+	<!-- <define name="CHESS"/> --> <!-- They ain't 100% mine -->
 
 	<!-- _________________________ Application Settings _________________________ -->
 

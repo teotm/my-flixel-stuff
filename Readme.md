@@ -5,6 +5,7 @@ I want to learn Flixel more and do some stuff outside of FNF. Yay!
 I will post some funny games I can make if I make one.
 
 
+
 As for now, there's only basic Hello World from HaxeFlixel.
 
 About to develop: [Quizomator's Undertale Quiz](https://gamejolt.com/games/undertale_quiz_scratch/666245) Haxe port.
@@ -29,18 +30,3 @@ I plan to add more games later :).
 	haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
 	haxelib install kha 16.1.2
 	```
-
-Worth mentioning before compiling: 
-
-Find these lines in [Project.xml](Project.xml#L8)
-```xml
-<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
-<!-- <define name="QUIZOMATOR"/> -->
-<define name="CHESS"/> <!-- They ain't 100% mine -->
-```
-and replace them with these ones:
-```xml
-<!-- <define name="HELLO_WORLD_FLIXEL"/> -->
-<define name="QUIZOMATOR"/>
-<!-- <define name="CHESS"/> -->
-```
