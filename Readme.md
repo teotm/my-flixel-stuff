@@ -19,8 +19,8 @@ I plan to add more games later :).
 3. Install these necessary Haxe Libraries, to compile all games possible
 	```cmd
 	haxelib install lime 7.9.0
-	haxelib install openfl
-	haxelib install flixel
+	haxelib install openfl 9.1.0
+	haxelib install flixel 4.10.0
 	haxelib run lime setup
 	haxelib run lime setup flixel
 	haxelib install flixel-tools
