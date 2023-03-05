@@ -16,17 +16,8 @@ I plan to add more games later :).
 ### Setup/Installation
 1. [Install Haxe](https://haxe.org/download)
 2. [Install git](https://git-scm.com/downloads) (read the instructions in the website)
-3. Install these necessary Haxe Libraries, to compile all games possible
+3. In order to be able compile all of the games type in these commands:
 	```cmd
-	haxelib install lime 7.9.0
-	haxelib install openfl 9.1.0
-	haxelib install flixel 4.10.0
-	haxelib run lime setup
-	haxelib run lime setup flixel
-	haxelib install flixel-tools
-	haxelib run flixel-tools setup
-	haxelib install flixel-addons
-	haxelib install flixel-ui
-	haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-	haxelib install kha 16.1.2
+	haxelib install hmm
+	haxelib run hmm install
 	```
